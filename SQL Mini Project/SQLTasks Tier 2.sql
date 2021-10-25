@@ -120,8 +120,8 @@ SELECT name AS Facility,
 	CASE WHEN Bookings.memid = 0 THEN slots * guestcost
 		ELSE slots * membercost END AS Cost	
 FROM Bookings
-	LEFT JOIN Facilities ON Bookings.facid = Facilities.facid
-	LEFT JOIN Members on Members.memid = Bookings.memid
+	INNER JOIN Facilities ON Bookings.facid = Facilities.facid
+	INNER JOIN Members on Members.memid = Bookings.memid
 WHERE starttime LIKE '2012-09-14%' AND 
 	CASE WHEN Bookings.memid = 0 THEN slots * guestcost 
 		ELSE slots * membercost END > 30
@@ -141,9 +141,9 @@ FROM
 		CASE WHEN Bookings.memid = 0 THEN slots * guestcost
 			ELSE slots * membercost END AS Cost
     FROM Bookings
-		LEFT JOIN Facilities ON Bookings.facid = Facilities.facid
+		INNER JOIN Facilities ON Bookings.facid = Facilities.facid
 	WHERE starttime LIKE '2012-09-14%') as Costs
-	LEFT JOIN Members on Costs.memid = Members.memid
+	INNER JOIN Members on Costs.memid = Members.memid
 WHERE Cost > 30
 ORDER BY Cost DESC
 
@@ -161,16 +161,37 @@ SELECT
         SUM(CASE WHEN Bookings.memid = 0 THEN slots * guestcost
                 ELSE slots * membercost END) AS TotalRevenue
 FROM Bookings 
-        LEFT JOIN Facilities ON Bookings.facid = Facilities.facid
+        INNER JOIN Facilities ON Bookings.facid = Facilities.facid
 GROUP BY name
 HAVING TotalRevenue < 1000
 ORDER BY TotalRevenue
 
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
 
+SELECT 
+	m1.surname AS Member_surname,
+	m1.firstname AS Member_firstname,
+	m2.surname AS RecommendedBy_Surname,
+	m2.firstname AS RecommendedBy_Firstname
+FROM Members AS m1
+	INNER JOIN Members as m2 ON m1.recommendedby = m2.memid
+WHERE m1.recommendedby > 0
+ORDER BY m2.surname, m2.firstname
 
 /* Q12: Find the facilities with their usage by member, but not guests */
 
+SELECT name, sum(slots) AS Total_slots_booked 
+FROM Bookings
+	INNER JOIN Facilities ON Facilities.facid = Bookings.facid 
+WHERE memid > 0
+GROUP BY name
+ORDER BY Total_slots_booked
 
 /* Q13: Find the facilities usage by month, but not guests */
 
+SELECT 
+        strftime('%m', starttime) AS month,
+        sum(slots) AS total_slots_booked
+FROM Bookings
+WHERE memid>0
+GROUP BY month
