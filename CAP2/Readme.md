@@ -5,7 +5,8 @@ The ability to accurately predict the customers who have a higher probability to
 
 
 ## 1. Data
-Telco is a fictional telecommunications company that provided home phone and Internet services to customers in California in Q3. The company is looking to identify any interesting patterns among the customers who left the company in Q3 so that they can implement strategies to retain more customers in the next quarter.
+Telco is a fictional telecommunications company that provided home phone and Internet services to customers in California in Q3. The company is looking to identify any interesting patterns among the customers who left the company in Q3 so that they can implement strategies to retain more customers in the next quarter. The following data are used in the analysis and modelling.
 
 > * [IBM Accelerator catalog](https://community.ibm.com/accelerators/catalog/content/Telco-customer-churn)
+    This dataset includes demographics information about customer such as gender, dependents, etc. as well as specific information on type of services the customer have with the company.
 > * [United States zipcodes database](https://www.unitedstateszipcodes.org/ca/#zips-list)
