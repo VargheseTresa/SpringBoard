@@ -49,6 +49,10 @@ Some other interesting relationships identified during EDA are shown below.
 
 Approximately 70% of the customers who left the company had Fibre Optic Internet service. This along with above data which indicates that better internet service from competitor could be a significant factor to customer churn
 
+### Statistical estimation of mean churn score for customers who churn
+
+Bootstrapping technique was applied to statistically estimate the confidence interval for the difference in mean churn score for customers who churn and customers who do not churn. The 95% confidence interval of the difference between mean churn scores of customers from both categories is estimated to be between 31.74 and 33.01.
+
 
 ## 5. Algorithms & Machine Learning
 
