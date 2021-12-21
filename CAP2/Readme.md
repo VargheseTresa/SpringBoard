@@ -60,3 +60,16 @@ Bootstrapping technique was applied to statistically estimate the confidence int
 
 ## 6. Predictions
 [Final Predictions Notebook](https://colab.research.google.com/drive/1vLkoW_4SYessy_igmJxlVz_jEPlgJ06v)
+
+
+
+### References
+
+Not all the work in this notebook is original. Some parts were borrowed from online resources. I take no credit for parts that are not mine. They were soley used for illustration purposes.
+
+1. https://www.statisticshowto.com/welchs-test-for-unequal-variances/
+2. https://medium.com/@sosterburg/mapping-data-with-folium-356f0d6f88a9
+
+### Resources used
+* [GeoJSON Source](https://github.com/OpenDataDE/State-zip-code-GeoJSON/blob/master/ca_california_zip_codes_geo.min.json)
+    The GeoJSON file is downloaded from the above mentioned repository.
