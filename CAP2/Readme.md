@@ -22,7 +22,11 @@ Telco is a fictional telecommunications company that provided home phone and Int
 
 The dataset includes 7043 observations about telecommunication customers from California. Out of the 7043 customers, 27% of the customers left the company in the end of Q3. Each observation contains various columns related to the customer and the type of services they use. There are no missing values in any columns except `Churn Reason`. This column has a value only for those customers who left the company. The preprocessing steps performed on other columns are described below.
 
-* **Preprocessing of numerical columns** The identified numerical columns are Tenure Months, Monthly Charges, Total Charges, Churn Score and CLTV. Out of these, Monthly Charges and Total Charges are highly correlated. Hence we keep only one of these columns. Also, as all the columns are in different scales, they are normalized to be on the same scale. This prevents columns with high magnitude such as CLTV from dominating over other low magnitude columns.
+* **Preprocessing of numerical columns** The identified numerical columns are `Tenure Months`, `Monthly Charges`, `Total Charges`, `Churn Score` and `CLTV`. Out of these, Monthly Charges and Total Charges are highly correlated. Hence we keep only one of these columns. Also, as all the columns are in different scales, they are normalized to be on the same scale. This prevents columns with high magnitude such as CLTV from dominating over other low magnitude columns.
+
+* **Preprocessing of categorical columns** The low cardinality categorical columns that are important to predict cusomer churn  identified are `Gender`,`Senior Citizen`,`Partner`,`Dependents`,`Phone Service`,`Multiple Lines`,`Internet Service`,`Online Security`,`Online Backup`,`Device Protection`,`Tech Support`,`Streaming TV`,`Streaming Movies`,`Contract`,`Paperless Billing` and `Payment Method`. These are encoded using one-hot encoding technique.
+
+
 
 ## 4. EDA
 [EDA Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_EDA.ipynb)
