@@ -17,6 +17,7 @@ Telco is a fictional telecommunications company that provided home phone and Int
 
 ## 3. Data Cleaning
 [Data Cleaning Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_wrangling_v1.ipynb)
+
 [Data preprocessing Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_preprocessing.ipynb)
 
 The dataset includes 7043 observations about telecommunication customers from California. Out of the 7043 customers, 27% of the customers left the company in the end of Q3. Each observation contains various columns related to the customer and the type of services they use. There are no missing values in any columns except `Churn Reason`. This column has a value only for those customers who left the company. The preprocessing steps performed on other columns are described below.
