@@ -26,12 +26,17 @@ The dataset includes 7043 observations about telecommunication customers from Ca
 
 * **Preprocessing of categorical columns** The low cardinality categorical columns that are important to predict cusomer churn  identified are `Gender`,`Senior Citizen`,`Partner`,`Dependents`,`Phone Service`,`Multiple Lines`,`Internet Service`,`Online Security`,`Online Backup`,`Device Protection`,`Tech Support`,`Streaming TV`,`Streaming Movies`,`Contract`,`Paperless Billing` and `Payment Method`. The categorical values in these columns are encoded using one-hot encoding technique.
 
-* **Preprocessing of location info** The data set includes customers from the state of California spread over 1652 unique postal codes and 1129 unique cities. As they are high cardinality values, these columns are dropped. The zip code values are mapped to corresponding county values using the United States Zip Codes database. The county values are then encoded using Label Encoder. As we are able to represent customer's georgraphic information in this way, we also delete the Latitude and Longitude columns.
+* **Handling of customer location information** The data set includes customers from the state of California spread over 1652 unique postal codes and 1129 unique cities. As they are high cardinality values, these columns are dropped. The zip code values are mapped to corresponding county values using the United States Zip Codes database. The county values are then encoded using Label Encoder. As we are able to represent customer's georgraphic information in this way, we also delete the Latitude and Longitude columns.
 
 
 
 ## 4. EDA
 [EDA Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_EDA.ipynb)
+
+**Analysis of target variable**
+It appears that customers who churn have relatively high churn score value as depicted in fig 1.
+
+![](./images/churn_value_vs_score.png)
 
 
 ## 5. Algorithms & Machine Learning
