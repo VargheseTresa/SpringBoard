@@ -35,12 +35,19 @@ The dataset includes 7043 observations about telecommunication customers from Ca
 
 **Analysis of target variable**
 
-It appears that we have an imbalanced target class with approximately 27% customers with churn = 1 class and 73% customers with churn = 0 class. Also, customers who churn have relatively high churn score value as depicted below.
+It appears that we have an imbalanced target class with approximately 27% customers with churn = 1 class and 73% customers with churn = 0 class. Also, customers who churn have relatively high churn score value or on mon to month contract as depicted below.
 
 ![](./images/distribution_of_target.png)
 ![](./images/churn_value_vs_score.png)
+![](./images/churn_contract.png)
+
+Some other interesting relationships identified during EDA are shown below.
+
+![](./images/churn_internet.png)
+![](./images/churn_reason.png)
 
 
+Approximately 70% of the customers who left the company had Fibre Optic Internet service. This along with above data which indicates that better internet service from competitor could be a significant factor to customer churn
 
 
 ## 5. Algorithms & Machine Learning
