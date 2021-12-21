@@ -34,9 +34,12 @@ The dataset includes 7043 observations about telecommunication customers from Ca
 [EDA Report](https://github.com/VargheseTresa/SpringBoard/blob/main/CAP2/CAP2_EDA.ipynb)
 
 **Analysis of target variable**
-It appears that customers who churn have relatively high churn score value as depicted in fig 1.
+
+It appears that customers who churn have relatively high churn score value as depicted below.
 
 ![](./images/churn_value_vs_score.png)
+![](./images/distribution_of_target.png)
+
 
 
 ## 5. Algorithms & Machine Learning
